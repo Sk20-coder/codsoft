@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sunny's Portfolio</title>
+  <link rel="stylesheet" href="sunny fortfolio.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Sunny Kumar</h1>
+      <p class="tagline">Web Developer</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="sunny.pdf.png" alt="Your Photo">
+        <p>
+          Hi, I'm Sunny, a passionate web developer with a love for creating intuitive and engaging websites. I specialize in front-end development, and I thrive on solving problems and bringing ideas to life.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <h3>HTML</h3>
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+        <div class="skill">
+          <h3>CSS</h3>
+          <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+        <div class="skill">
+          <h3>Java</h3>
+          <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+    </div>
+  </section>
+  <section id="resume" class="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <p><a href="My-Resume.pdf" download class="download-btn">Download My Resume (PDF)</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you'd like to work together or have any questions, feel free to get in touch!</p>
+      <ul>
+        <li><strong>Email:</strong> sunnyjeerock01@gmail.com</li>
+        <li><strong>Phone:</strong> +919341799179</li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy;Developed By Sunny Kumar. All rights are reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+CSS
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header .tagline {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:hover {
+    color: #ecf0f1;
+  }
+  
+  .about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+  }
+  
+  .skills {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .skill {
+    width: 22%;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .skill h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #f39c12;
+    height: 8px;
+    border-radius: 4px;
+  }
+  
+  .projects {
+    background-color: #fff;
+    padding: 60px 0;
+  }
+  
+  .projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  .project-list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .project {
+    width: 30%;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    color: #555;
+  }
+  
+  .resume {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .download-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .download-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  .contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact a {
+    color: #f39c12;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    color: #e67e22;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
