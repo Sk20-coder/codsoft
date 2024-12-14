@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Landing page</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Your Future</h2>
+      <p>Unlock the potential of creativity with our tools and resources.</p>
+      <a href="#features" class="cta-button">Discover More</a>
+    </div>
+  </section>
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-box">
+        <div class="feature">
+          <h3>Innovative Tools</h3>
+          <p>Use cutting-edge tools that help bring your ideas to life.</p>
+        </div>
+        <div class="feature">
+          <h3>Expert Support</h3>
+          <p>Get expert advice and guidance whenever you need it.</p>
+        </div>
+        <div class="feature">
+          <h3>Easy Integration</h3>
+          <p>Seamlessly integrate with other platforms and systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy;Developed By Sunny Kumar.All rights are reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+  css 
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; 
+    color: #333;
+  }
+  
+  header {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #ecf0f1; 
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #ecf0f1; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #f39c12; 
+  }
+  
+  .hero {
+    background-image: linear-gradient(to bottom right, #ff6347, #f39c12);
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    background-color: #f39c12; 
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e67e22; 
+    transform: scale(1.1); 
+  }
+  
+  .features {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50; 
+  }
+  
+  .feature-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature {
+    background-color: #e74c3c; 
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #ecf0f1; 
+  }
+  
+  footer {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    color: #bdc3c7; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-content {
+    animation: fadeIn 1s ease-out;
+  }
+  
