@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achha Wala Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="screen">
+      <input type="text" id="display" disabled>
+    </div>
+
+    <div class="buttons">
+      <button class="btn" onclick="appendNumber('7')">7</button>
+      <button class="btn" onclick="appendNumber('8')">8</button>
+      <button class="btn" onclick="appendNumber('9')">9</button>
+      <button class="btn operator" onclick="setOperator('/')">/</button>
+
+      <button class="btn" onclick="appendNumber('4')">4</button>
+      <button class="btn" onclick="appendNumber('5')">5</button>
+      <button class="btn" onclick="appendNumber('6')">6</button>
+      <button class="btn operator" onclick="setOperator('*')">*</button>
+
+      <button class="btn" onclick="appendNumber('1')">1</button>
+      <button class="btn" onclick="appendNumber('2')">2</button>
+      <button class="btn" onclick="appendNumber('3')">3</button>
+      <button class="btn operator" onclick="setOperator('-')">-</button>
+
+      <button class="btn" onclick="appendNumber('0')">0</button>
+      <button class="btn" onclick="clearScreen()">C</button>
+      <button class="btn operator" onclick="calculateResult()">=</button>
+      <button class="btn operator" onclick="setOperator('+')">+</button>
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
+
+
+  CSS
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  .calculator {
+    width: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .screen {
+    background-color: #222;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: right;
+  }
+  
+  #display {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  .operator {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .operator:hover {
+    background-color: #e67e22;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+
+
+
+
+java script 
+
+
+let currentInput = '';
+let operator = '';
+let firstNumber = null;
+
+function appendNumber(number) {
+  currentInput += number;
+  document.getElementById('display').value = currentInput;
+}
+
+function setOperator(op) {
+  if (firstNumber === null) {
+    firstNumber = parseFloat(currentInput);
+  }
+  operator = op;
+  currentInput = '';
+}
+
+function calculateResult() {
+  if (firstNumber === null || operator === '') return;
+  let secondNumber = parseFloat(currentInput);
+  let result;
+  
+  switch (operator) {
+    case '+':
+      result = firstNumber + secondNumber;
+      break;
+    case '-':
+      result = firstNumber - secondNumber;
+      break;
+    case '*':
+      result = firstNumber * secondNumber;
+      break;
+    case '/':
+      if (secondNumber === 0) {
+        alert('Cannot divide by zero');
+        result = '';
+      } else {
+        result = firstNumber / secondNumber;
+      }
+      break;
+    default:
+      return;
+  }
+
+  document.getElementById('display').value = result;
+  currentInput = result.toString();
+  firstNumber = null;
+  operator = '';
+}
+
+function clearScreen() {
+  currentInput = '';
+  firstNumber = null;
+  operator = '';
+  document.getElementById('display').value = '';
+}
